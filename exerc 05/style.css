@@ -15,16 +15,21 @@ body {
   place-content: center;
 }
 body h2 {
-  font-size: 80px;
+  font-size: 40px;
   text-transform: uppercase;
+  position: relative;
+  color: red;
 }
-body h2:before {
-  content: "Hello";
-  animation: colorChange 3s backwards;
+body h2::before {
+  content: "HELLOWORLD";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  color: blue;
+  transition: 1s;
 }
-
-@keyframes colorChange {
-  to {
-    background-color: blue;
-  }
+body h2:hover::before {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
