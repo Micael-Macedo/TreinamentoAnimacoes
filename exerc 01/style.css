@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #222;
+}
+body ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: rotate(-25deg) skew(25deg);
+}
+body ul li {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+body ul li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 30px !important;
+  transition: 0.2s;
+}
+body ul li::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #2a2a2a;
+  transform-origin: top;
+  transform: skewX(-41deg);
+}
+body ul li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background-color: #2a2a2a;
+  transform-origin: right;
+  transform: skewY(-49deg);
+}
+body ul li:hover span {
+  z-index: 1000;
+  transition: 0.5s;
+  color: #fff;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+body ul li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+body ul li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+body ul li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+body ul li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+body ul li:hover span:nth-child(1) {
+  transform: translate(0, 0);
+  opacity: 0.2;
+}
+body ul li:nth-child(1):hover span {
+  background-color: #3b5999;
+}
+body ul li:nth-child(2):hover span {
+  background-color: #55acee;
+}
+body ul li:nth-child(3):hover span {
+  background-color: #e4405F;
+}
+body ul li:nth-child(4):hover span {
+  background-color: #0077B5;
+}
+body ul li:nth-child(5):hover span {
+  background-color: #25D366;
+}/*# sourceMappingURL=style.css.map */
