@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1f293a;
+
+    .container {
+        position: relative;
+        width: 520px;
+        height: 530px;
+        background-color: transparent;
+        border: 2px solid #0eF;
+        padding: 80px 45px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+
+        .login-box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+    }
+
+    .page-box {
+        display: flex;
+        flex-direction: column;
+        .login-title {
+            text-align: center;
+            margin-bottom: 40px;
+
+            h2 {
+                font-size: 32px;
+                line-height: 1.5;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+        .page {
+            width: 100%;
+            .input-box {
+                width: 100%;
+                height: 55px;
+                position: relative;
+
+                & input {
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    border: 2px solid #2c4766;
+                    outline: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    padding: 0 16px;
+                    transition: .3s;
+                    &:focus~label{
+                        top: 1px;
+                        left: 12px;
+                        font-size: 13px;
+                        color: #0eF;
+                        background-color: #1f293a;
+                        padding: 0 6px;
+                    }
+                    &:focus{
+                        border-color: #0eF;
+                    }
+                }
+
+                & label {
+                    position: absolute;
+                    top: 48%;
+                    left: 20px;
+                    transform: translateY(-50%);
+                    font-size: 18px;
+                    pointer-events: none;
+                    transition: .3s ease;
+ 
+                }
+
+            }
+            .forgot {
+                margin-top: 6px;
+                &.show{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    label{
+                        font-size: 14.5px;
+                        color: #fff;
+                        cursor: pointer;
+                        input{
+                            accent-color: #0ef;
+                            cursor: pointer;
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+
+            .guess-mode {
+                margin: 40px 0;
+
+                p {
+                    font-size: 14.5px;
+                }
+
+            }
+
+
+        }
+        .page.password-page{
+            margin-top: 114px;
+            position: absolute;
+            transform: translateX(0px);
+        }
+        .page.email-page{
+            transform: translateX(-500px);
+        }
+    }
+
+    .btn-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 90px;
+            height: 40px;
+            background-color: #0eF;
+            border: 2px solid #0eF;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #1f293a;
+            font-weight: 600;
+            &:nth-child(1){
+                background-color: transparent;
+                color: #0eF;
+            }
+        }
+    }
+}
+
+a {
+    font-size: 14.5px;
+    color: #0eF;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
