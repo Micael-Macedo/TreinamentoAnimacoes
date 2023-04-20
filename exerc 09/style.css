@@ -26,6 +26,7 @@ body .container {
   display: flex;
   align-items: center;
   border-radius: 8px;
+  overflow: hidden;
 }
 body .container .login-box {
   position: relative;
@@ -39,7 +40,6 @@ body .page-box {
 }
 body .page-box .login-title {
   text-align: center;
-  margin-bottom: 40px;
 }
 body .page-box .login-title h2 {
   font-size: 32px;
@@ -50,6 +50,7 @@ body .page-box .login-title p {
   font-weight: 500;
 }
 body .page-box .page {
+  margin-top: 40px;
   width: 100%;
 }
 body .page-box .page .input-box {
@@ -68,7 +69,8 @@ body .page-box .page .input-box input {
   padding: 0 16px;
   transition: 0.3s;
 }
-body .page-box .page .input-box input:focus ~ label {
+body .page-box .page .input-box input:focus ~ label,
+body .page-box .page .input-box input:valid ~ label {
   top: 1px;
   left: 12px;
   font-size: 13px;
@@ -76,7 +78,7 @@ body .page-box .page .input-box input:focus ~ label {
   background-color: #1f293a;
   padding: 0 6px;
 }
-body .page-box .page .input-box input:focus {
+body .page-box .page .input-box:focus {
   border-color: #0eF;
 }
 body .page-box .page .input-box label {
@@ -107,23 +109,35 @@ body .page-box .page .forgot.show label input {
   margin-right: 3px;
 }
 body .page-box .page .guess-mode {
-  margin: 40px 0;
+  margin-top: 40px;
 }
 body .page-box .page .guess-mode p {
   font-size: 14.5px;
 }
+body .page-box.active-pass .page.email-page {
+  transform: translateX(-500px) translateY(20px);
+}
+body .page-box.active-pass .page.password-page {
+  transform: translate(0);
+}
 body .page-box .page.password-page {
+  transition: 0.25s linear;
   margin-top: 114px;
   position: absolute;
-  transform: translateX(0px);
+  transform: translateX(500px);
+}
+body .page-box .page.password-page .btn-box {
+  margin-top: 125px;
 }
 body .page-box .page.email-page {
-  transform: translateX(-500px);
+  transition: 0.25s linear;
+  transform: translateX(0px);
 }
 body .btn-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
 body .btn-box button {
   width: 90px;
