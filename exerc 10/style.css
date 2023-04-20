@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url("./imgs/ws_261346_img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  position: relative;
+}
+.container:hover .card {
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.container:hover span {
+  display: block;
+  opacity: 1;
+  animation: pulse 4s infinite;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  min-height: 400px;
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: 1s ease-in-out;
+  border: 2px solid black;
+  z-index: 2;
+  position: relative;
+}
+.card:hover {
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(130%);
+    opacity: 0;
+  }
+}
+span {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  min-height: 400px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  z-index: 0;
+  transition: 1s;
+}/*# sourceMappingURL=style.css.map */
